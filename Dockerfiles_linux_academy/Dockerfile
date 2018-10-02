@@ -1,4 +1,3 @@
-#First Real Dockerfile
 ARG TAGVERSION=6
 
 FROM centos:${TAGVERSION}
@@ -20,4 +19,4 @@ VOLUME /mymount
 
 EXPOSE 8080
 
-ENTRYPOINT apachectl "-DFOREGROUND"
+ENTRYPOINT ls -al / | wc -l
