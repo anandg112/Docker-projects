@@ -5,3 +5,4 @@ RUN apk add --update \
     postgresql-dev \
     tzdata
 
+RUN gem install rails -v '5.1.6'
