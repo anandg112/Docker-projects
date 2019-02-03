@@ -1,13 +1,11 @@
 FROM node:alpine
 
-RUN mkdir app/
-
 COPY package.json app/package.json
+RUN yarn install
+
 COPY index.js app/index.js
 
 WORKDIR /app
-
-RUN yarn install
 
 EXPOSE 8080
 
