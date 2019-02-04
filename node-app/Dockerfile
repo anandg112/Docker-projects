@@ -1,11 +1,12 @@
 FROM node:alpine
 
-COPY package.json app/package.json
+WORKDIR /app
+
+COPY package.json .
+
 RUN yarn install
 
-COPY index.js app/index.js
-
-WORKDIR /app
+COPY index.js .
 
 EXPOSE 8080
 
