@@ -16,3 +16,9 @@ COPY Gemfile Gemfile
 RUN bundle install
 
 COPY . .
+
+RUN bundle exec rake RAILS_ENV=production DATABASE_URL=postgresql://user:pass@127.0.0.1/dbname SECRET_TOKEN=secretoken assets:precompile
+
+VOLUME ["$INSTALL_PATH/public"]
+
+CMD bundle exec unicorn -c config/unicorn.rb
