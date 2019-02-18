@@ -3,7 +3,7 @@ FROM ruby:2.3-slim
 LABEL maintainer anand_gautam
 
 RUN apt-get update && \
-    apt-get install -y build-essential nodejs libpq-dev libsqlite3-dev --fix-missing --no-install-recommends
+    apt-get install -y build-essential nodejs libpq-dev --fix-missing --no-install-recommends
 
 ENV INSTALL_PATH /opt/app
 
