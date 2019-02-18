@@ -17,7 +17,7 @@ RUN bundle install
 
 COPY . .
 
-RUN bundle exec rake RAILS_ENV=production DATABASE_URL=postgresql://user:pass@127.0.0.1/dbname SECRET_TOKEN=secretoken assets:precompile
+RUN bundle exec rake RAILS_ENV=production DATABASE_URL=postgresql://user:pass@127.0.0.1/dbname SECRET_TOKEN=pickasecuretoken assets:precompile
 
 VOLUME ["$INSTALL_PATH/public"]
 
