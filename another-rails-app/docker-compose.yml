@@ -24,7 +24,7 @@ services:
       - postgres
       - redis
     volumes:
-      .:/opt/app
+      - .:/opt/app
     ports:
       - '8000:8000'
     env_file:
