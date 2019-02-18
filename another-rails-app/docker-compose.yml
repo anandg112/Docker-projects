@@ -18,7 +18,7 @@ services:
     volumes:
       - ~/.docker-volumes/mobydock/redis/data:/var/lib/redis/data
 
-  webapp:
+  mobydock:
     build: .
     links:
       - postgres
