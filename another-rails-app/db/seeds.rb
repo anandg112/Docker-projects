@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+messages = [
+  "Thanks good sir. I'm feeling quite healthy!",
+  'Thanks for the meal buddy.',
+  "Please stop feeding me. I'm getting huge!"
+]
+
+messages.each do |message|
+  feedback = Feedback.create(message: message)
+  feedback.save!
+end
