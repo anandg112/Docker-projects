@@ -6,7 +6,7 @@ services:
 before_install:
   - cd react-app/
   - docker build . -f Dockerfile.dev -t react-app
-  - docker run -p 3000:3000 react-app /bin/sh -c "yarn start;"
+  - docker run -p 3000:3000 react-app
 
 script:
   - yarn start
